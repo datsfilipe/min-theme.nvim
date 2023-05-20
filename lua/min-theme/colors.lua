@@ -5,11 +5,11 @@ local colors = {
 
 if vim.o.background == 'light' then
   -- background colors
-  colors.fg = '#ffffff'
-  colors.fgDark = '#dddddd'
-  colors.fgDarker = '#f6f6f6'
-  colors.fgFloat = '#E0E0E0'
-  colors.fgOption = '#EDEDED'
+  colors.bg = '#ffffff'
+  colors.bgDark = '#dddddd'
+  colors.bgDarker = '#f6f6f6'
+  colors.bgFloat = '#E0E0E0'
+  colors.bgOption = '#EDEDED'
   -- foreground colors
   colors.fg = '#616161'
   colors.fgAlt = '#212121'
