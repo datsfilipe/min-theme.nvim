@@ -30,10 +30,11 @@ use 'datsfilipe/min-theme.nvim'
 
 ## Configuration
 
-For now it's in early stage, so if you want to use just do `:colorscheme min-theme-dark`.
+For now it's in early stage, so if you want to use just do `:colorscheme min-theme`.
 
-> **Warning**:
-> Only **min-theme-dark** was tested yet, so **min-theme-light** and **min-theme** might present errors.
+## Contributing
+
+Contributions are welcome, please open an issue if you encounter any bug and also feel free to open a PR.
 
 ## License
 
