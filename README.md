@@ -19,7 +19,7 @@ A port of [Min Theme](https://github.com/miguelsolorio/min-theme) for Neovim.
 1. Using `Lazy`:
 
 ```lua
-{ 'datsfilipe/min-theme.nvim' }
+{ 'datsfilipe/min-theme.nvim' },
 ```
 
 2. Using `Packer`:
@@ -30,7 +30,22 @@ use 'datsfilipe/min-theme.nvim'
 
 ## Configuration
 
-For now it's in early stage, so if you want to use just do `:colorscheme min-theme`.
+To configure the plugin, you can call require('min-theme').setup({}), passing the table with the values in it, the following are the **defaults**:
+
+```lua
+require('min-theme').setup({
+    theme = 'dark', -- String: 'dark' or 'light', determines the colorscheme used (obs: if your config sets vim.o.background, this will do nothing)
+    transparent = false, -- Boolean: Sets the background to transparent
+    italics: {
+        comments = true, -- Boolean: Italicizes comments
+        keywords = true, -- Boolean: Italicizes keywords
+        functions = true, -- Boolean: Italicizes functions
+        strings = true, -- Boolean: Italicizes strings
+        variables = true, -- Boolean: Italicizes variables
+    },
+    overrides = {}, -- A dictionary of group names, can be a function returning a dictionary or a table.
+})
+```
 
 ## Contributing
 
