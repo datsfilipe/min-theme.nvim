@@ -25,6 +25,7 @@ local function set_terminal_colors()
 end
 
 local function set_groups()
+	local bg = config.transparent and "NONE" or colors.bg
 	local bg_diff_add = utils.shade(colors.green, 0.5, colors.bg)
 	local bg_diff_delete = utils.shade(colors.red, 0.5, colors.bg)
 	local bg_diff_change = utils.shade(colors.blue, 0.5, colors.bg)
@@ -32,7 +33,7 @@ local function set_groups()
 
 	local groups = {
 		-- base
-		Normal = { fg = colors.fg, bg = colors.bg },
+		Normal = { fg = colors.fg, bg = bg },
 		LineNr = { fg = colors.fgLineNr },
 		ColorColumn = { bg = utils.shade(colors.blueLight, 0.5, colors.bg) },
 		Conceal = {},
@@ -50,7 +51,7 @@ local function set_groups()
 		TermCursor = { link = "Cursor" },
 		TermCursorNC = { link = "Cursor" },
 		ErrorMsg = { fg = colors.red },
-		VertSplit = { fg = colors.border, bg = colors.bg },
+		VertSplit = { fg = colors.border, bg = bg },
 		Winseparator = { link = "VertSplit" },
 		SignColumn = { link = "Normal" },
 		Folded = { fg = colors.fg, bg = colors.bgDarker },
@@ -58,7 +59,7 @@ local function set_groups()
 		IncSearch = { bg = utils.mix(colors.blue, colors.bg, math.abs(0.30)), fg = colors.bg },
 		Substitute = { link = "IncSearch" },
 		CursorLineNr = { fg = colors.comment },
-		MatchParen = { fg = colors.red, bg = colors.bg },
+		MatchParen = { fg = colors.red, bg = bg },
 		ModeMsg = { link = "Normal" },
 		MsgArea = { link = "Normal" },
 		-- MsgSeparator = {},
@@ -73,7 +74,7 @@ local function set_groups()
 		Question = { fg = colors.blue },
 		QuickFixLine = { fg = colors.blue },
 		SpecialKey = { fg = colors.symbol },
-		StatusLine = { fg = colors.fg, bg = colors.bg },
+		StatusLine = { fg = colors.fg, bg = bg },
 		StatusLineNC = { fg = colors.fgInactive, bg = colors.bgDark },
 		TabLine = { bg = colors.bgDark, fg = colors.fgInactive },
 		TabLineFill = { link = "TabLine" },
