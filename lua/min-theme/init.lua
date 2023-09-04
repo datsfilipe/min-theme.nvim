@@ -25,6 +25,11 @@ local function set_terminal_colors()
 end
 
 local function set_groups()
+	local bg_diff_add = utils.shade(colors.green, 0.5, colors.bg)
+	local bg_diff_delete = utils.shade(colors.red, 0.5, colors.bg)
+	local bg_diff_change = utils.shade(colors.blue, 0.5, colors.bg)
+	local bg_diff_text = utils.shade(colors.yellowDark, 0.5, colors.bg)
+
 	local groups = {
 		-- base
 		Normal = { fg = colors.fg, bg = colors.bg },
@@ -37,10 +42,10 @@ local function set_groups()
 		CursorLine = { bg = colors.bgDarker },
 		CursorColumn = { link = "CursorLine" },
 		Directory = { fg = colors.blue },
-		DiffAdd = { bg = colors.bg },
-		DiffChange = { bg = colors.bg },
-		DiffDelete = { bg = colors.bg },
-		DiffText = { bg = colors.bg },
+		DiffAdd = { bg = bg_diff_add },
+		DiffChange = { bg = bg_diff_change },
+		DiffDelete = { bg = bg_diff_delete },
+		DiffText = { bg = bg_diff_text },
 		EndOfBuffer = { fg = colors.purple },
 		TermCursor = { link = "Cursor" },
 		TermCursorNC = { link = "Cursor" },
