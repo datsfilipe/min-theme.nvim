@@ -26,10 +26,10 @@ end
 
 local function set_groups()
 	local bg = config.transparent and "NONE" or colors.bg
-	local bg_diff_add = utils.shade(colors.green, 0.5, colors.bg)
-	local bg_diff_delete = utils.shade(colors.red, 0.5, colors.bg)
-	local bg_diff_change = utils.shade(colors.blue, 0.5, colors.bg)
-	local bg_diff_text = utils.shade(colors.yellowDark, 0.5, colors.bg)
+	local diff_add = utils.shade(colors.green, 0.5, colors.bg)
+	local diff_delete = utils.shade(colors.red, 0.5, colors.bg)
+	local diff_change = utils.shade(colors.blue, 0.5, colors.bg)
+	local diff_text = utils.shade(colors.yellowDark, 0.5, colors.bg)
 
 	local groups = {
 		-- base
@@ -43,10 +43,10 @@ local function set_groups()
 		CursorLine = { bg = colors.bgDarker },
 		CursorColumn = { link = "CursorLine" },
 		Directory = { fg = colors.blue },
-		DiffAdd = { bg = bg_diff_add },
-		DiffChange = { bg = bg_diff_change },
-		DiffDelete = { bg = bg_diff_delete },
-		DiffText = { bg = bg_diff_text },
+		DiffAdd = { bg = bg, fg = diff_add },
+		DiffChange = { bg = bg, fg = diff_change },
+		DiffDelete = { bg = bg, fg = diff_delete },
+		DiffText = { bg = bg, fg = diff_text },
 		EndOfBuffer = { fg = colors.purple },
 		TermCursor = { link = "Cursor" },
 		TermCursorNC = { link = "Cursor" },
