@@ -47,9 +47,22 @@ require('min-theme').setup({
 })
 ```
 
+### Specifics for Some Plugins
+
+#### Bufferline.nvim
+
+To use the theme with [bufferline.nvim](https://github.com/akinsho/bufferline.nvim), you can use the following configuration:
+
+```lua
+require('min-theme').bufferline({
+    -- ... your bufferline config options, ignoring `highlights` option
+    -- that way, min-theme will setup bufferline.nvim for you with the theme highlight groups.
+})
+```
+
 ## Contributing
 
-Contributions are welcome, please open an issue if you encounter any bug and also feel free to open a PR.
+Contributions are welcome, please open an issue if you encounter any bug or if you find any improvements are needed for the code, also feel free to open a PR.
 
 ## License
 
