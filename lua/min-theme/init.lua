@@ -1,6 +1,7 @@
 local colors = require("min-theme.colors")
 local config = require("min-theme.config")
 local utils = require("min-theme.utils")
+local bufferline = require("min-theme.integrations.bufferline")
 local min = {}
 
 local function set_terminal_colors()
@@ -286,6 +287,9 @@ end
 
 function min.setup(values)
 	setmetatable(config, { __index = vim.tbl_extend("force", config.defaults, values) })
+
+	min.bufferline = { highlights = {} }
+	min.bufferline.highlights = bufferline.highlights(config)
 end
 
 function min.colorscheme()
