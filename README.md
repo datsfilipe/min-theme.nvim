@@ -36,7 +36,7 @@ To configure the plugin, you can call require('min-theme').setup({}), passing th
 require('min-theme').setup({
     theme = 'dark', -- String: 'dark' or 'light', determines the colorscheme used (obs: if your config sets vim.o.background, this will do nothing)
     transparent = false, -- Boolean: Sets the background to transparent
-    italics: {
+    italics = {
         comments = true, -- Boolean: Italicizes comments
         keywords = true, -- Boolean: Italicizes keywords
         functions = true, -- Boolean: Italicizes functions
