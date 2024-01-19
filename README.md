@@ -34,7 +34,8 @@ To configure the plugin, you can call require('min-theme').setup({}), passing th
 
 ```lua
 require('min-theme').setup({
-    theme = 'dark', -- String: 'dark' or 'light', determines the colorscheme used (obs: if your config sets vim.o.background, this will do nothing)
+    -- (note: if your configuration sets vim.o.background the following option will do nothing!)
+    theme = 'dark', -- String: 'dark' or 'light', determines the colorscheme used
     transparent = false, -- Boolean: Sets the background to transparent
     italics = {
         comments = true, -- Boolean: Italicizes comments
@@ -46,6 +47,10 @@ require('min-theme').setup({
     overrides = {}, -- A dictionary of group names, can be a function returning a dictionary or a table.
 })
 ```
+
+- **The `colorscheme()` function**
+
+This function can be used to set the colorscheme in your editor, however, if it doesn't work for you, you can always use `vim.cmd.colorscheme('min-theme')`.
 
 ### Specifics for Some Plugins
 
