@@ -257,7 +257,6 @@ local function set_groups()
 		["@error"] = { link = "Error" },
 		["@warning"] = { link = "WarningMsg" },
 		["@info"] = { fg = colors.blue },
-    ["@object.identifier"] = { fg = colors.blue },
 
 		-- Specific languages
 		-- overrides
@@ -283,10 +282,10 @@ local function set_groups()
 		["@lsp.typemod.function.readonly"] = { link = "@function" },
 	}
 
-  -- integrations
-  groups = vim.tbl_extend("force", groups, cmp.highlights())
+	-- integrations
+	groups = vim.tbl_extend("force", groups, cmp.highlights())
 
-  -- overrides
+	-- overrides
 	groups =
 		vim.tbl_extend("force", groups, type(config.overrides) == "function" and config.overrides() or config.overrides)
 
