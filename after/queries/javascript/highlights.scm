@@ -1,9 +1,17 @@
 ;; extends
-(pair
-  [
-    ";"
-    ","
-  ] @punctuation.terminator.statement
-  ":" @punctuation.separator.keyvalue)
-(pair
-  ":" @punctuation.separator.keyvalue)
+
+[
+  (pair)
+    [
+      ";"
+      ","
+      "."
+    ] @punctuation.terminator.statement
+    ":" @punctuation.separator.keyvalue
+  (arguments)
+    [
+      ";"
+      ","
+      "."
+    ] @punctuation.terminator.statement
+]
