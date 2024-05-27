@@ -1,5 +1,6 @@
-<div align="center">
-
+<div align=center>
+    <img src="assets/icon.png" width="250" />
+    
 # Min Theme
 
 A port of [Min Theme](https://github.com/miguelsolorio/min-theme) for Neovim.
@@ -7,7 +8,7 @@ A port of [Min Theme](https://github.com/miguelsolorio/min-theme) for Neovim.
 <br/>
 <br/>
 
-![preview-dark](https://user-images.githubusercontent.com/76636791/235570903-edfbd62e-3908-4f5b-ae03-4b9945d58020.png) 
+![preview-dark](assets/screenshot-dark.png) 
 
 <br/>
 <br/>
