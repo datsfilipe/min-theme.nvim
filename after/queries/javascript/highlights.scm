@@ -15,3 +15,6 @@
       "."
     ] @punctuation.terminator.statement
 ]
+((identifier) @tag.jsx.element
+ (#match? @tag.jsx.element "^[A-Z]")
+ (#set! "priority" 110))

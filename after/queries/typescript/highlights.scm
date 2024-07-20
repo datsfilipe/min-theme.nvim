@@ -17,3 +17,6 @@
 ]
 (type_annotation
   ":" @punctuation.separator.keyvalue)
+((identifier) @tag.jsx.element
+ (#match? @tag.jsx.element "^[A-Z]")
+ (#set! "priority" 110))
