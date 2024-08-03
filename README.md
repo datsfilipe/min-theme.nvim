@@ -8,7 +8,7 @@ A port of [Min Theme](https://github.com/miguelsolorio/min-theme) for Neovim.
 <br/>
 <br/>
 
-![preview-dark](assets/screenshot-dark.png) 
+![preview-dark](assets/preview.png) 
 
 <br/>
 <br/>
